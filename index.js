@@ -67,41 +67,7 @@ const questions = [
 
 // TODO: Create a function to write README file
 function writeToFile() {
-    inquirer
-        .prompt(questions)
-        .then(answers => console.log(
-             `
-            # ${answers.name}
-
-            ## Description
-            This is where the basic README stuff will go
-
-            ## Table of Contents
-
-            ================================================
-
-            ## Usage
-                ${answer.usage}
-            ================================================
-
-            ##License
-
-            ================================================
-
-            ## Contributors 
-
-            ================================================
-
-            ## tests 
-
-            ================================================
-
-            ## Questions 
-            If you have any questions please email me at 
-            My GitHub account is ${github} you'll be able to find more there
-            ================================================
-            `
-        ))
+    return inquirer.prompt(questions)
 }
 
 // TODO: Create a function to initialize app
