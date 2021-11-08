@@ -46,31 +46,66 @@ const questions = [
     },
     {
         type: 'input',
-        name: 'questions',
-        message: 'enter your github name and email address for people to ask you questions'
+        name: 'email',
+        message: 'enter your email address for people to ask you questions'
+    },
+    {
+        type: 'input',
+        name: 'github',
+        message: 'enter your Github username for people to ask you questions'
     }
     
 ];
 
+inquirer
+    .prompt(questions)
+    .then(console.log(answers))
+
 
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {
-    return `
-        # ${fileName}
-        ## Discription
-        This is where the basic README stuff will go
-        `
-}
+// function writeToFile(fileName, data) {
+//     return `
+//         # ${fileName}
 
-// TODO: Create a function to initialize app
-function init() {
-    fs.writeFile(`${fileName}.md`, writeToFile(fileName, data), err => {
-        if (err) throw new Error(err);
+//         ## Description
+//         This is where the basic README stuff will go
 
-        console.log('Your README file has been generated');
-    })
-}
+//         ## Table of Contents
 
-// Function call to initialize app
-init();
+//         ================================================
+
+//         ## Usage
+
+//         ================================================
+
+//         ##License
+
+//         ================================================
+
+//         ## Contributors 
+
+//         ================================================
+
+//         ## tests 
+
+//         ================================================
+
+//         ## Questions 
+//         If you have any questions please email me at 
+//         My GitHub account is ${github} you'll be able to find more there
+//         ================================================
+//         `
+// }
+
+// // TODO: Create a function to initialize app
+// function init() {
+//     fs.writeFile(`${fileName}.md`, writeToFile(fileName, data), err => {
+//         if (err) throw new Error(err);
+
+//         console.log('Your README file has been generated');
+//     })
+// }
+
+// // Function call to initialize app
+// init();
