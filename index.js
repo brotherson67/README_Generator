@@ -57,52 +57,56 @@ const questions = [
     }
     
 ];
-test = () => {
+
     inquirer
         .prompt(questions)
-        .then(answers => console.lof(answers));
-}
+        .then(answers => console.log(answers));
+
 
 
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {
-    return `
-        # ${fileName}
+function writeToFile() {
+    inquirer
+        .prompt(questions)
+        .then(answers => console.log(
+             `
+            # ${answers.name}
 
-        ## Description
-        This is where the basic README stuff will go
+            ## Description
+            This is where the basic README stuff will go
 
-        ## Table of Contents
+            ## Table of Contents
 
-        ================================================
+            ================================================
 
-        ## Usage
+            ## Usage
+                ${answer.usage}
+            ================================================
 
-        ================================================
+            ##License
 
-        ##License
+            ================================================
 
-        ================================================
+            ## Contributors 
 
-        ## Contributors 
+            ================================================
 
-        ================================================
+            ## tests 
 
-        ## tests 
+            ================================================
 
-        ================================================
-
-        ## Questions 
-        If you have any questions please email me at 
-        My GitHub account is ${github} you'll be able to find more there
-        ================================================
-        `
+            ## Questions 
+            If you have any questions please email me at 
+            My GitHub account is ${github} you'll be able to find more there
+            ================================================
+            `
+        ))
 }
 
 // TODO: Create a function to initialize app
 function init() {
-    fs.writeFile(`${fileName}.md`, writeToFile(fileName), err => {
+    fs.writeFile(`README.md`, writeToFile(), err => {
         if (err) throw new Error(err);
 
         console.log('Your README file has been generated');
