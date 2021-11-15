@@ -68,7 +68,22 @@ function writeToFile(fileName, answers) {
     } 
 // TODO: Create a function to initialize app
 function init() {
-    writeToFile('test', answers)
+    inquirer
+        .prompt(questions)
+        .then(function(answers) {
+            const fileName = answers.name.split(' ').join('') + '.md';
+
+            const generateFile = generateMarkdown(answer) 
+
+            writeToFile(fileName, generateFile, (err) => {
+                if (err) {
+                    return console.log(err);
+                }
+
+                console.log('nice job man, you finally got it')
+            })
+        })
+    
 }
 
 // Function call to initialize app
