@@ -49,4 +49,4 @@ function generateMarkdown(answers) {
     `
 };
 
-module.exports = generateMarkdown;
+module.exports = generateMarkdown();

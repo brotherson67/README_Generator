@@ -58,29 +58,18 @@ const questions = [
     
 ];
 
-function getQuestions() {
-    inquirer
-        .prompt(questions)
-        .then(answers => answers);
-    
-}
 
 // TODO: Create a function to write README file
-function writeToFile() {
-    getQuestions()
-    generateMarkdown()
-    
+function writeToFile(fileName, answers) {
+    fs.writeFile(`${fileName}.md`, answers, (err) => {
+        if (err) throw err;
+        console.log('The file has been saved!');
+      });
+    } 
+// TODO: Create a function to initialize app
+function init() {
+    writeToFile('test', answers)
 }
 
-
-// // TODO: Create a function to initialize app
-// function init() {
-//     fs.writeFile(`PROJREADME.md`, writeToFile(), err => {
-//         if (err) throw new Error(err);
-
-//         console.log('Your README file has been generated');
-//     })
-// }
-
-// // Function call to initialize app
-// init();
+// Function call to initialize app
+init();
