@@ -1,8 +1,10 @@
 // TODO: Include packages needed for this application
 const fs = require('fs');
 const inquirer = require('inquirer');
-const generateMarkdown = ('./generateMarkdown')
+const generateMarkdown = require('./src/generateMarkdown.js')
 
+
+// console.log(generateMarkdown)
 // TODO: Create an array of questions for user input
 const questions = [
     {
@@ -66,14 +68,15 @@ function writeToFile(fileName, answers) {
         console.log('The file has been saved!');
       });
     } 
+
 // TODO: Create a function to initialize app
 function init() {
     inquirer
         .prompt(questions)
         .then(function(answers) {
-            const fileName = answers.name.split(' ').join('') + '.md';
+            const fileName = answers.title + '.md';
 
-            const generateFile = generateMarkdown(answer) 
+            const generateFile = generateMarkdown(answers)
 
             writeToFile(fileName, generateFile, (err) => {
                 if (err) {

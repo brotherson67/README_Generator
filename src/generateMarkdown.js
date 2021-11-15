@@ -13,7 +13,7 @@
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(answers) {
   return  `
-    # ${answers.name}
+    # ${answers.title}
 
     ## Description
     This is where the basic README stuff will go
@@ -49,4 +49,4 @@ function generateMarkdown(answers) {
     `
 };
 
-module.exports = generateMarkdown();
+module.exports = generateMarkdown;
