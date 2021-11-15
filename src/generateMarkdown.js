@@ -21,7 +21,7 @@ function generateMarkdown(answers) {
     ## Table of Contents
       - [Usage](#usage)
       - [Licence](#license)
-      - [Contributors](#contributors)
+      - [Contributing](#contributing)
       - [Tests](#tests)
       - [Questions](#questions)
     ================================================
@@ -35,7 +35,7 @@ function generateMarkdown(answers) {
     ================================================
 
     ## Contributors 
-      ${answers.contributors}
+      ${answers.contributing}
     ================================================
 
     ## tests 
