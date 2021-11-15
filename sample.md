@@ -1,5 +1,5 @@
 
-    # 
+    # Sample
 
     ## Description
     This is where the basic README stuff will go
@@ -13,11 +13,11 @@
     ================================================
 
     ## Usage
-      
+      coding 
     ================================================
 
     ##License
-      
+      MIT
     ================================================
 
     ## Contributors 
@@ -25,11 +25,11 @@
     ================================================
 
     ## tests 
-      
+      no
     ================================================
 
     ## Questions 
-    If you have any questions please email me at 
-    My GitHub account is  you'll be able to find more there
+    If you have any questions please email me at mitchbro.development@gmail.com
+    My GitHub account is brotherson67 you'll be able to find more there
     ================================================
     

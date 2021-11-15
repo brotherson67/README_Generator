@@ -63,7 +63,7 @@ const questions = [
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, answers) {
-    fs.writeFile(`${fileName}`, answers, (err) => {
+    fs.writeFile(`${fileName}.md`, answers, (err) => {
         if (err) throw err;
         console.log('The file has been saved!');
       });
@@ -74,7 +74,7 @@ function init() {
     inquirer
         .prompt(questions)
         .then(function(answers) {
-            const fileName = answers.title + '.md';
+            const fileName = answers.title;
 
             const generateFile = generateMarkdown(answers)
 
